@@ -9,7 +9,7 @@ use BlackBrickSoftware\LaravelMigrationBuilder\Table;
 use Illuminate\Database\Console\Migrations\BaseCommand;
 use Illuminate\Support\Composer;
 
-class Example extends BaseCommand
+class ExampleCommand extends BaseCommand
 {
   /**
    * The name and signature of the console command.

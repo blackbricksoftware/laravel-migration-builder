@@ -33,7 +33,7 @@ class LaravelMigrationBuilderServiceProvider extends ServiceProvider
     );
     // commands
     $this->commands([
-      Commands\Example::class
+      Commands\ExampleCommand::class
     ]);
   }
 }
