@@ -5,7 +5,8 @@
     "require": {
         "php": "^7.4|^8.0",
         "illuminate/support": "^8.25",
-        "illuminate/filesystem": "^8.25"
+        "illuminate/filesystem": "^8.25",
+        "illuminate/database": "^8.25"
     },
     "authors": [
         {
