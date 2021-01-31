@@ -3,7 +3,8 @@
 namespace BlackBrickSoftware\LaravelMigrationBuilder;
 
 // use Illuminate\Support\Str;
-use BadMethodCallException;
+// use BadMethodCallException;
+use LogicException;
 
 class Base
 {
@@ -17,7 +18,7 @@ class Base
   public function __get(string $name)
   {
     if (!property_exists($this, $name))
-      throw new BadMethodCallException("Unknown property: {$name}");
+      throw new LogicException("Unknown property: {$name}");
 
     return $this->$name;
   }
