@@ -65,12 +65,12 @@ class Example extends BaseCommand
       'timestamps' => false,
     ]);
 
-    $column = new Column('id', 'integer', [
+    $idColumn = new Column('id', 'integer', [
       'autoIncrement' => true,
     ]);
-    $table->addColumn($column);
+    $table->addColumn($idColumn);
 
-    $table->addColumn(new Column('id', 'string', [
+    $table->addColumn(new Column('name', 'string', [
       'length' => 255,
     ]));
 
