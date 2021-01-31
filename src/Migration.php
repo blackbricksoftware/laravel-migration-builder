@@ -8,8 +8,6 @@ namespace BlackBrickSoftware\LaravelMigrationBuilder;
 
 use Illuminate\Support\Str;
 
-// return new MigrationCreator($app['files'], $app->basePath('stubs'));
-
 class Migration extends Base
 {
 
