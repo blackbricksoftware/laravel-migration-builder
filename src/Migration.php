@@ -29,9 +29,9 @@ class Migration extends Base
   /**
    * The migration creator instance.
    *
-   * @var \Illuminate\Database\Migrations\MigrationCreator
+   * @var MigrationCreator
    */
-  protected $creator;
+  protected MigrationCreator $creator;
 
   /**
    * Migration constructor.
