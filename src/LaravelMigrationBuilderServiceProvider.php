@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 class LaravelMigrationBuilderServiceProvider extends ServiceProvider
 {
+  
   /**
    * Publishes configuration file.
    *
@@ -14,9 +15,10 @@ class LaravelMigrationBuilderServiceProvider extends ServiceProvider
   public function boot()
   {
     $this->publishes([
-      __DIR__ . '/../config/laravel_migration_builder.php' => config_path('laravel_migration_builder.php'),
+      __DIR__ . '/../config/migration_builder.php' => config_path('migration_builder.php'),
     ], 'laravel-migration-builder-config');
   }
+
   /**
    * Make config publishment optional by merging the config from the package.
    *
@@ -24,9 +26,14 @@ class LaravelMigrationBuilderServiceProvider extends ServiceProvider
    */
   public function register()
   {
+    // config
     $this->mergeConfigFrom(
-      __DIR__ . '/../config/laravel_migration_builder.php',
-      'laravel_migration_builder'
+      __DIR__ . '/../config/migration_builder.php',
+      'migration_builder'
     );
+    // commands
+    $this->commands([
+      Commands\Example::class
+    ]);
   }
 }

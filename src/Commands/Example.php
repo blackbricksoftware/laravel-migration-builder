@@ -16,7 +16,8 @@ class Example extends BaseCommand
    *
    * @var string
    */
-  protected $signature = 'make:migration-builder-example';
+  protected $signature = 'make:migration-builder-example
+    {--path= : The location where the migration file should be created}';
 
   /**
    * The console command description.
@@ -63,10 +64,15 @@ class Example extends BaseCommand
     $table = new Table('Account', [
       'timestamps' => false,
     ]);
+
     $column = new Column('id', 'integer', [
       'autoIncrement' => true,
     ]);
     $table->addColumn($column);
+
+    $table->addColumn(new Column('id', 'string', [
+      'length' => 255,
+    ]));
 
     $migration = new Migration('create_account_table', $path, $table, $migrationCreator);
     $file = $migration->writeMigration(true);
