@@ -14,7 +14,7 @@ Programmatically define a table and column definitions and write a migration fil
 
 ## Usage
 
-See [src/Commands/Example.php](src/Commands/Example.php)
+See [src/Commands/ExampleCommand.php](src/Commands/ExampleCommand.php)
 
 # Acknowledgement
 
