@@ -4,7 +4,7 @@ namespace BlackBrickSoftware\LaravelMigrationBuilder;
 
 use Illuminate\Support\ServiceProvider;
 
-class LaravelLogEnhancerServiceProvider extends ServiceProvider
+class LaravelMigrationBuilderServiceProvider extends ServiceProvider
 {
   /**
    * Publishes configuration file.
