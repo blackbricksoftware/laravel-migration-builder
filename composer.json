@@ -1,0 +1,31 @@
+{
+    "name": "blackbricksoftware/laravel-migration-builder",
+    "description": "Programatically create full laravel migrations.",
+    "type": "library",
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.25",
+        "illuminate/filesystem": "^8.25"
+    },
+    "authors": [
+        {
+            "name": "David Hayes",
+            "email": "david@blackbrick.software"
+        }
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "BlackBrickSoftware\\LaravelMigrationBuilder\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BlackBrickSoftware\\LaravelMigrationBuilder\\LaravelMigrationBuilderServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
