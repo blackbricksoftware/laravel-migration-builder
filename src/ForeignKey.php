@@ -108,14 +108,18 @@ class ForeignKey
   /**
    * onDelete setter
    * 
-   * @param string $onDelete
+   * @param string|null $onDelete
    * @return ForeignKey
    * @throws InvalidArgumentException
    */
-  public function setOnDelete(string $onDelete): ForeignKey
+  public function setOnDelete(?string $onDelete): ForeignKey
   {
-    if (!in_array($this->type, static::SUPPORTED_ON_DELETES))
-      throw new UnexpectedValueException("Unsupport On Delete value");
+
+    if ($onDelete!==null) {
+
+      if (!in_array($this->type, static::SUPPORTED_ON_DELETES))
+        throw new UnexpectedValueException("Unsupport On Delete value");
+    }
 
     $this->onDelete = $onDelete;
 

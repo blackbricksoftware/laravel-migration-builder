@@ -242,24 +242,32 @@ class Column extends Base
   /**
    * Length setter
    * 
-   * @param int $length
-   * @param int $fractional
+   * @param int|null $length
+   * @param int|null $fractional
    * @return Column
    * @throws InvalidArgumentException
    */
-  public function setLength(int $length, int $fractional = null): Column
+  public function setLength(?int $length, ?int $fractional = null): Column
   {
 
-    if (!in_array($this->type, static::COLUMN_WITH_LENGTH))
-      throw new InvalidArgumentException("Lengh is not supported on column type {$this->type}");
+    if ($length!==null) {
+
+      if (!in_array($this->type, static::COLUMN_WITH_LENGTH))
+        throw new InvalidArgumentException("Lengh is not supported on column type {$this->type}");
+    }
 
     $this->length = $length;
 
-    if ($fractional !== null && !in_array($this->type, static::COLUMN_WITH_FRACTION))
-      throw new InvalidArgumentException("Fractional is not supported on column type {$this->type}");
+    if ($fractional !== null) {
 
-    if ($fractional !== null)
-      $this->fractional = $fractional;
+      if (!in_array($this->type, static::COLUMN_WITH_FRACTION))
+        throw new InvalidArgumentException("Fractional is not supported on column type {$this->type}");
+
+      if ($this->length===null)
+        throw new InvalidArgumentException("Lengh is require when using fractional");
+    }
+
+    $this->fractional = $fractional;
 
     return $this;
   }
@@ -267,19 +275,22 @@ class Column extends Base
   /**
    * Default Value setter
    * 
-   * @param string $defaulValue
+   * @param string|null $defaulValue
    * @return Column
    * @throws InvalidArgumentException
    * @throws RuntimeException
    */
-  public function setDefaultValue(string $defaultValue): Column
+  public function setDefaultValue(?string $defaultValue): Column
   {
 
-    if (!in_array($this->type, static::COLUMN_WITH_DEFAULT_VALUE))
-      throw new InvalidArgumentException("Default value is not supported on column type {$this->type}");
+    if ($defaultValue !== null) {
 
-    if ($defaultValue!==null && $this->autoIncrement)
-      throw new RuntimeException('Cannot add a default value to an Auto Increment');
+      if (!in_array($this->type, static::COLUMN_WITH_DEFAULT_VALUE))
+        throw new InvalidArgumentException("Default value is not supported on column type {$this->type}");
+
+      if ($this->autoIncrement)
+        throw new RuntimeException('Cannot add a default value to an Auto Increment');
+    }
 
     $this->defaultValue = $defaultValue;
 
@@ -289,10 +300,10 @@ class Column extends Base
   /**
    * Comment setter
    * 
-   * @param string $comment
+   * @param string|null $comment
    * @return Column
    */
-  public function setComment(string $comment): Column
+  public function setComment(?string $comment): Column
   {
 
     $this->comment = $comment;
