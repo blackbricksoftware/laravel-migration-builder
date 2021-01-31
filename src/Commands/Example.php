@@ -16,7 +16,7 @@ class Example extends BaseCommand
    *
    * @var string
    */
-  protected string $signature = 'make:migration-builder-example
+  protected $signature = 'make:migration-builder:example
     {--path= : The location where the migration file should be created}';
 
   /**
@@ -24,7 +24,7 @@ class Example extends BaseCommand
    *
    * @var string
    */
-  protected string $description = 'Create an example migration from Laravel Migration Builder';
+  protected $description = 'Create an example migration from Laravel Migration Builder';
 
   /**
    * The Composer instance.
