@@ -4,7 +4,7 @@
  * Loosly based on: https://github.com/Agontuk/schema-builder/blob/master/src/Migrations/MigrationCreator.php
  */
 
-namespace BlackBrickSoftware\LaravelMigrationBuilder;
+namespace BlackBrickSoftware\MigrationBuilder;
 
 use Illuminate\Support\Str;
 

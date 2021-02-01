@@ -1,11 +1,11 @@
 <?php
 
-namespace BlackBrickSoftware\LaravelMigrationBuilder\Commands;
+namespace BlackBrickSoftware\MigrationBuilder\Commands;
 
-use BlackBrickSoftware\LaravelMigrationBuilder\Column;
-use BlackBrickSoftware\LaravelMigrationBuilder\Migration;
-use BlackBrickSoftware\LaravelMigrationBuilder\MigrationCreator;
-use BlackBrickSoftware\LaravelMigrationBuilder\Table;
+use BlackBrickSoftware\MigrationBuilder\Column;
+use BlackBrickSoftware\MigrationBuilder\Migration;
+use BlackBrickSoftware\MigrationBuilder\MigrationCreator;
+use BlackBrickSoftware\MigrationBuilder\Table;
 use Illuminate\Database\Console\Migrations\BaseCommand;
 use Illuminate\Support\Composer;
 

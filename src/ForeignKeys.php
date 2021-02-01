@@ -1,6 +1,6 @@
 <?php
 
-namespace BlackBrickSoftware\LaravelMigrationBuilder;
+namespace BlackBrickSoftware\MigrationBuilder;
 
 use ArrayObject;
 

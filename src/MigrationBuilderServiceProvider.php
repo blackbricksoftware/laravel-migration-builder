@@ -1,10 +1,10 @@
 <?php
 
-namespace BlackBrickSoftware\LaravelMigrationBuilder;
+namespace BlackBrickSoftware\MigrationBuilder;
 
 use Illuminate\Support\ServiceProvider;
 
-class LaravelMigrationBuilderServiceProvider extends ServiceProvider
+class MigrationBuilderServiceProvider extends ServiceProvider
 {
   
   /**

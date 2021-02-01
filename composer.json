@@ -17,13 +17,13 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "BlackBrickSoftware\\LaravelMigrationBuilder\\": "src/"
+            "BlackBrickSoftware\\MigrationBuilder\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "BlackBrickSoftware\\LaravelMigrationBuilder\\LaravelMigrationBuilderServiceProvider"
+                "BlackBrickSoftware\\MigrationBuilder\\MigrationBuilderServiceProvider"
             ]
         }
     },

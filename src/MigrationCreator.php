@@ -5,7 +5,7 @@
  * Modified to allow building talbe structure
  */
 
-namespace BlackBrickSoftware\LaravelMigrationBuilder;
+namespace BlackBrickSoftware\MigrationBuilder;
 
 use Closure;
 use Illuminate\Filesystem\Filesystem;
