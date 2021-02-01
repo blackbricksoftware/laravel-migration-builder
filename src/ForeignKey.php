@@ -44,7 +44,7 @@ class ForeignKey
    * @param string $on
    * @throws InvalidArgumentException
    */
-  public function __construct(string $column, string $references, string $on, $options)
+  public function __construct(string $column, string $references, string $on, array $options = [])
   {
     $this->setColumn($column);
     $this->setReferences($references);

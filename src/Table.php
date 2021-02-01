@@ -40,7 +40,7 @@ class Table extends Base
    * 
    * @throws InvalidArgumentException
    */
-  public function __construct(string $name, $options)
+  public function __construct(string $name, array $options = [])
   {
 
     $this->setName($name);

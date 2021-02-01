@@ -164,7 +164,7 @@ class Column extends Base
    *
    * @param string $name
    */
-  public function __construct(string $name, string $type, $options)
+  public function __construct(string $name, string $type, array $options = [])
   {
 
     $this->setName($name);
