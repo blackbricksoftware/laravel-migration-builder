@@ -323,9 +323,14 @@ class Column extends Base
     if (!in_array($this->type, static::COLUMN_WITH_AUTO_INCREMENT))
       throw new InvalidArgumentException("Auto Increment is not supported on column type {$this->type}");
 
+    // Auto increment columns have no default value and should be unsigned
+    if ($autoIncrement) {
+      $this->setDefaultValue(null);
+      $this->setNullable(false);
+      $this->setUnsigned(true);
+    }
+
     $this->autoIncrement = $autoIncrement;
-    $this->defaultValue = false;
-    $this->unsigned = true;
 
     return $this;
   }
