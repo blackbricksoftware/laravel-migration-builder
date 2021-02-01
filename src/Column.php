@@ -25,8 +25,8 @@ class Column extends Base
     // Numeric
     'tinyInteger',
     'smallInteger',
-    'integer',
     'mediumInteger',
+    'integer',
     'bigInteger',
     'boolean',
     'decimal',
@@ -88,8 +88,8 @@ class Column extends Base
     // Numeric
     'tinyInteger',
     'smallInteger',
-    'integer',
     'mediumInteger',
+    'integer',
     'bigInteger',
     'boolean',
     'decimal',
