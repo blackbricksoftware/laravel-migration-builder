@@ -231,7 +231,7 @@ class Column extends Base
   {
 
     if (!in_array($type, static::SUPPORTED_TYPES))
-      throw new InvalidArgumentException('Type is not supported');
+      throw new InvalidArgumentException("Type {$type} is not supported");
 
     $this->type = $type;
 
