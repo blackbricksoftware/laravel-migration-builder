@@ -229,7 +229,7 @@ class Migration extends Base
     return implode("\n", $commands);
   }
 
-    /**
+  /**
    * Parse a foreign key into a creation command
    *
    * @param ForeignKey $foreignKey
