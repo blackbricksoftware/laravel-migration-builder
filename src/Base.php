@@ -6,7 +6,7 @@ namespace BlackBrickSoftware\LaravelMigrationBuilder;
 // use BadMethodCallException;
 use LogicException;
 
-class Base
+abstract class Base
 {
 
   /**
