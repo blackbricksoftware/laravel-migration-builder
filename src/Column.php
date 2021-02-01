@@ -4,7 +4,6 @@ namespace BlackBrickSoftware\LaravelMigrationBuilder;
 
 use InvalidArgumentException;
 use RuntimeException;
-use UnexpectedValueException;
 
 class Column extends Base
 {
