@@ -14,7 +14,9 @@ Programmatically define a table and column definitions and write a migration fil
 
 ## Usage
 
-See [src/Commands/ExampleCommand.php](src/Commands/ExampleCommand.php)
+See [src/Commands/ExampleCommand.php](src/Commands/ExampleCommand.php) for an example.
+
+Run `php artisan make:migration-builder:example` to create an migration with this example.
 
 # Acknowledgements
 
