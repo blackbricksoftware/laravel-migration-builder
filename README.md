@@ -2,7 +2,7 @@
 
 ## Description
 
-Programmatically define a table and column definitions and write a migration file. Useful for instance where you would like to create migration from an external source such as an api to store the data locally. See [here](https://github.com/blackbricksoftware/laravel-salesforce-sync) for an example usage.
+Programmatically define a table and column definitions and write a migration file. Useful for instance where you would like to create migration from an external source such as an api to store the data locally. See [here](https://github.com/blackbricksoftware/laravel-migration-builder-salesforce) for an example usage.
 
 ## Installation
 
