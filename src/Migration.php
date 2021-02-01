@@ -90,7 +90,7 @@ class Migration extends Base
    * @param  bool  $create
    * @return string
    */
-  public function writeMigration($create): string
+  public function writeMigration(bool $create): string
   {
 
     $file = $this->creator->create(
