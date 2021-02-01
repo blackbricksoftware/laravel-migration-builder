@@ -176,7 +176,7 @@ class Column extends Base
      */
 
     if (array_key_exists('autoIncrement', $options))
-      $this->setDefaultValue($options['autoIncrement']);
+      $this->setAutoIncrement($options['autoIncrement']);
 
     if (array_key_exists('length', $options)) {
       $fractional = $options['fractional'] ?? null;
