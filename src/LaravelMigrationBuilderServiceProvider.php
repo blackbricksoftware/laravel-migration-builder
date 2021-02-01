@@ -12,7 +12,7 @@ class LaravelMigrationBuilderServiceProvider extends ServiceProvider
    *
    * @return  void
    */
-  public function boot()
+  public function boot(): void
   {
     $this->publishes([
       __DIR__ . '/../config/migration_builder.php' => config_path('migration_builder.php'),
@@ -24,7 +24,7 @@ class LaravelMigrationBuilderServiceProvider extends ServiceProvider
    *
    * @return  void
    */
-  public function register()
+  public function register(): void
   {
     // config
     $this->mergeConfigFrom(
