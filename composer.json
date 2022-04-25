@@ -3,10 +3,10 @@
     "description": "Programatically create full laravel migrations.",
     "type": "library",
     "require": {
-        "php": "^7.4|^8.0",
-        "illuminate/support": "^8.25",
-        "illuminate/filesystem": "^8.25",
-        "illuminate/database": "^8.25"
+        "php": "^8.0.2",
+        "illuminate/support": "^9.2",
+        "illuminate/filesystem": "^9.2",
+        "illuminate/database": "^9.2"
     },
     "authors": [
         {
