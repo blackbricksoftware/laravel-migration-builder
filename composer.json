@@ -1,6 +1,6 @@
 {
     "name": "blackbricksoftware/laravel-migration-builder",
-    "description": "Programatically create full laravel migrations.",
+    "description": "Programmatically create full Laravel migrations.",
     "type": "library",
     "require": {
         "php": "^8.0.2",
